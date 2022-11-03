@@ -10,6 +10,7 @@ TagManager:
   - ItemVidas
   - Disparo
   - Telepuerto_3
+  - ItemVidas2
   layers:
   - Default
   - TransparentFX

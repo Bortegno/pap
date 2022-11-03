@@ -19,20 +19,24 @@ public class MenuPausa : MonoBehaviour
             menuDePausa.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible=true;
+            Time.timeScale = 0;
         }
         else
         {
             menuDePausa.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible=false;
+            Time.timeScale = 1;
         }
     }
     public void Continuar()
     {
-        menuDePausa.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible=true;
+        menuDePausa.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible=false;
+        Time.timeScale = 1;
         menuOn=false;
+        
     }
     public void Inicio()
     {

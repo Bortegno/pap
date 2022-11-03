@@ -44,6 +44,11 @@ public class SC_FPSController : MonoBehaviour
     int contadorMonedas;
     int contadorPociones;
     int contadorMuertes;
+    public GameObject PopUp;
+    public GameObject PopUp2;
+    public GameObject PopUp3;
+    public GameObject PopUp4;
+    public GameObject PopUp5;
 
     //////// Teleport Trigger  ////
     public GameObject avatar; 
@@ -74,9 +79,50 @@ public class SC_FPSController : MonoBehaviour
         
     }
 
+    public void Continuar()
+        {
+            PopUp.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible=false;
+            Time.timeScale = 1;
+        }
+
+    public void Continuar2()
+        {
+            PopUp2.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible=false;
+            Time.timeScale = 1;
+        }
+
+    public void Continuar3()
+        {
+            PopUp3.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible=false;
+            Time.timeScale = 1;
+        }
+
+    public void Continuar4()
+        {
+            PopUp4.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible=false;
+            Time.timeScale = 1;
+        }
+
+    public void Continuar5()
+        {
+            PopUp5.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible=false;
+            Time.timeScale = 1;
+        }
+
     public void OnTriggerEnter(Collider other)
 	{
 		 
+
         if(other.tag =="Telepuerto_1")
         {
             SceneManager.LoadScene (sceneName);
@@ -97,35 +143,36 @@ public class SC_FPSController : MonoBehaviour
            //SceneManager.LoadScene ("Animacion");
            
          }
-
+         
          if(other.tag == "ItemVidas")
          { 
             Destroy(other.gameObject);
             contadorVidas=contadorVidas+1;
             TextVidas.text ="Notas: "+contadorVidas; 
+
+            PopUp.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible=true;
+            Time.timeScale = 0;
          }
+
+         if(other.tag == "ItemVidas2")
+         { 
+            Destroy(other.gameObject);
+            contadorVidas=contadorVidas+1;
+            TextVidas.text ="Notas: "+contadorVidas; 
+
+            PopUp2.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible=true;
+            Time.timeScale = 0;
+         }
+
          if(other.tag == "Enemy")
          {
             SceneManager.LoadScene (sceneName2);
-            
          }
 
-         if(other.tag == "ItemPociones")
-         { 
-            Destroy(other.gameObject);
-            contadorPociones=contadorPociones+1;
-            TextPociones.text =""+contadorPociones;
-         }
-
-          if(other.tag == "ItemMonedas")
-         { 
-            Destroy(other.gameObject);
-            contadorMonedas=contadorMonedas+1;
-            TextMonedas.text =""+contadorMonedas;
-             
-            //TextPositionX.text="X:   "+Time.deltaTime; 
-         }
-		//TextPositionX.text="X:   "+Time.deltaTime;
 	}
 	void Awake()
     {
