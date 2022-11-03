@@ -1873,7 +1873,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1159179613
 PrefabInstance:
@@ -2535,7 +2535,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 20, y: 20, z: 20}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1811158237 stripped
 Transform:
@@ -2814,6 +2814,21 @@ PrefabInstance:
     - target: {fileID: 6359648241907080313, guid: 0824085b011d1ea45991e6a72ead538c,
         type: 3}
       propertyPath: m_BounceIntensity
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359648242579718220, guid: 0824085b011d1ea45991e6a72ead538c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359648242579718220, guid: 0824085b011d1ea45991e6a72ead538c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359648242579718220, guid: 0824085b011d1ea45991e6a72ead538c,
+        type: 3}
+      propertyPath: m_Size.z
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6901972161210898953, guid: 0824085b011d1ea45991e6a72ead538c,
